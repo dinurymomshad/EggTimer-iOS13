@@ -11,5 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
 
-
+    @IBAction func selectedHardness(_ sender: UIButton) {
+        print(sender.currentTitle!)
+    }
+    
 }
