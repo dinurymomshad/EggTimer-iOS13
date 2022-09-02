@@ -121,6 +121,22 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2o-Lu-tFE">
+                                                <rect key="frame" x="125" y="107.5" width="124" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Stop Egg Timer">
+                                                    <color key="baseBackgroundColor" red="0.60641008620000003" green="0.10832791780000001" blue="0.1235707179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccd-5q-rPx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="H2o-Lu-tFE" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="Bnt-uJ-3SS"/>
+                                            <constraint firstItem="H2o-Lu-tFE" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="Vu8-Ky-9lD"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
