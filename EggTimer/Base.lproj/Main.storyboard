@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -122,8 +123,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
                                         <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wLe-u9-q7B">
+                                                <rect key="frame" x="0.0" y="120.5" width="374" height="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="0ts-6C-Ndd"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemYellowColor"/>
+                                                <color key="trackTintColor" systemColor="systemGrayColor"/>
+                                            </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2o-Lu-tFE">
-                                                <rect key="frame" x="125" y="107.5" width="124" height="31"/>
+                                                <rect key="frame" x="125" y="145.5" width="124" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Stop Egg Timer">
                                                     <color key="baseBackgroundColor" red="0.60641008620000003" green="0.10832791780000001" blue="0.1235707179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -134,8 +143,11 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="H2o-Lu-tFE" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="Bnt-uJ-3SS"/>
+                                            <constraint firstItem="wLe-u9-q7B" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="4l9-H2-aHq"/>
+                                            <constraint firstAttribute="trailing" secondItem="wLe-u9-q7B" secondAttribute="trailing" id="OgV-4Q-Zl3"/>
                                             <constraint firstItem="H2o-Lu-tFE" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="Vu8-Ky-9lD"/>
+                                            <constraint firstItem="wLe-u9-q7B" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="YGJ-K6-YBQ"/>
+                                            <constraint firstItem="H2o-Lu-tFE" firstAttribute="top" secondItem="wLe-u9-q7B" secondAttribute="bottom" constant="20" id="pZG-cC-gKp"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -150,6 +162,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="wI6-ag-afn" secondAttribute="trailing" id="dky-ZA-Z3J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="headerLabel" destination="XLm-5r-pSP" id="hZW-5C-UkK"/>
+                        <outlet property="progressBar" destination="wLe-u9-q7B" id="4kU-EW-GZm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,5 +176,11 @@
         <image name="hard_egg" width="287.5" height="366"/>
         <image name="medium_egg" width="288" height="363"/>
         <image name="soft_egg" width="287" height="365"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
